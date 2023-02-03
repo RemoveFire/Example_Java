@@ -1,4 +1,5 @@
 
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -37,7 +38,8 @@ public class MainUnit01 {
                 а остальные - равны ему.""");
         System.out.println("\n\tРешение 'Задание 3': \n");
 
-        ASize = 3;
+        System.out.println("Задайте размер массива (счет идет от 0): ");
+        ASize = ScannerNumber();
         Min = 1;
         Max = 3;
         System.out.printf("Введите число, которое нужно переместить (%d-%d): ", Min, Max);
