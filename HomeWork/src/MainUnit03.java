@@ -1,7 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 import static Unit03.Task1.*;
@@ -27,7 +23,7 @@ public class MainUnit03 {
         System.out.printf("Отсортированный список (удалены четные числа): " +
                 "\u001B[34m%s\u001B[0m\n", ListArray(ASize,Min, Max));
         System.out.println("\n\t\u001B[31mРешение 2 (встроенное в язык):\u001B[0m ");
-        Iterator(ASize,Min, Max);
+        NoIterator(ASize,Min, Max);
         System.out.println("\n-----------");
 
 
@@ -39,32 +35,18 @@ public class MainUnit03 {
         System.out.println("\n\tРешение 'Задание 2': \n");
 
 
-        System.out.println("Введите слово, которое хотите записать в файл: ");
-        String InputString = ReStr();
-        System.out.printf("Введите сколько нужно повторить слово %s раз: ",  InputString);
-        int InputNumber = Integer.parseInt(ReStr());
-        System.out.println("Введите название файла (без .txt и т.п. формата файла): ");
-        String FileName = ReStr();
+        System.out.print("Введите число, какого размера задать список: ");
+        ASize = ScannerNumber();
+        System.out.print("Введите число минимального значения массива: ");
+        Min = ScannerNumber();
+        System.out.print("Введите число максимального значения массива: ");
+        Max = ScannerNumber();
 
 
 
-        System.out.println("Решение: ");
-//        AppMainTask2(InputNumber, InputString, FileName);
+        System.out.println("\n\t\u001B[31mОтвет:\u001B[0m ");
+        InputArrayList(ASize,Min, Max);
         System.out.println("\n-----------");
-    }
-
-    private static String ReStr() {
-        Scanner readL = new Scanner(System.in);
-        return readL.next();
-    }
-
-    private static int[] FormArray(int ArraySize, int MinNumber, int MaxNumber) {
-        Random rnd = new Random();
-        int[] TempArr = new int[ArraySize + 1];
-        for (int i = 0; i <= ArraySize; i++) {
-            TempArr[i] = rnd.nextInt(MinNumber, MaxNumber + 1);
-        }
-        return TempArr;
     }
 
     private static int ScannerNumber() {

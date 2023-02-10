@@ -28,14 +28,14 @@ public class Task1 {
         return ArrayListTask2;
     }
 
-    public static void Iterator(int ArrSize, int Min, int Max) {
-        ArrayList<Integer> tempList = ListFromArray(ArrSize, Min, Max);
-        System.out.printf("Сформирован список: \u001B[32m%s \u001B[0m\n", tempList);
-        tempList.removeIf(x -> x % 2 == 0);
-        System.out.printf("После удаления чётных чисел: \u001B[34m%s \u001B[0m\n", tempList);
+    public static void NoIterator(int ArrSize, int Min, int Max) {
+        ArrayList<Integer> NoIterArrayList = ListFromArray(ArrSize, Min, Max);
+        System.out.printf("Сформирован список: \u001B[32m%s \u001B[0m\n", NoIterArrayList);
+        NoIterArrayList.removeIf(x -> x % 2 == 0);
+        System.out.printf("После удаления чётных чисел: \u001B[34m%s \u001B[0m\n", NoIterArrayList);
     }
 
-    public static ArrayList<Integer> ListFromArray(int ArraySize, int MinNumber, int MaxNumber) {
+    private static ArrayList<Integer> ListFromArray(int ArraySize, int MinNumber, int MaxNumber) {
         Random rnd = new Random();
         ArrayList<Integer> TempArrList = new ArrayList<>(ArraySize + 1);
         for (int i = 0; i <= ArraySize; i++) {
@@ -43,5 +43,4 @@ public class Task1 {
         }
         return TempArrList;
     }
-
 }
