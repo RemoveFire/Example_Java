@@ -1,37 +1,65 @@
 package Unit04;
 
+import java.io.*;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
+import java.util.Scanner;
+
 
 public class Task2 {
     /**
      * Задание 2
-     *  Пусть дан LinkedList с несколькими элементами.
-     *  Реализуйте метод, который вернет “перевернутый” список.
+     * Пусть дан LinkedList с несколькими элементами.
+     * Реализуйте метод, который вернет “перевернутый” список.
      */
-    public static void InputArrayList(int ArrSize, int Min, int Max) {
-        ArrayList<Integer> ArrList = ListFromArray(ArrSize, Min, Max);
-        System.out.printf("Сформирован список: \u001B[32m%s \u001B[0m\n", ArrList);
-        double ArithmeticMean = 0;
-        for (int elem : ArrList) {
-            ArithmeticMean += elem;
-        }
-        ArithmeticMean = ArithmeticMean / ArrList.size();
-        Collections.sort(ArrList);
-        System.out.printf("""
-                Max = \u001B[34m%s\u001B[0m,
-                Min = \u001B[34m%s\u001B[0m,
-                Avg = \u001B[34m%.2f\u001B[0m.
-                """, ArrList.get(ArrList.size() - 1), ArrList.get(0), ArithmeticMean);
+
+    public static void LinkedList() {
+        String str = Scanner();
+        // Строка неизменна
+        str = reverse(str);
+
+        System.out.println("\nРеверс данной строки: \n" + str);
     }
 
-    private static ArrayList<Integer> ListFromArray(int ArraySize, int MinNumber, int MaxNumber) {
-        Random rnd = new Random();
-        ArrayList<Integer> TempArrList = new ArrayList<>(ArraySize + 1);
-        for (int i = 0; i <= ArraySize; i++) {
-            TempArrList.add(rnd.nextInt(MinNumber, MaxNumber + 1));
+    public static String reverse(String str) {
+        // базовый случай: если строка нулевая или пустая
+        if (str == null || str.equals("")) {
+            return str;
         }
-        return TempArrList;
+        // создаем пустой список символов
+        List<Character> list = new ArrayList<Character>();
+        // помещаем туда каждый символ заданной строки
+        for (char c : str.toCharArray()) {
+            list.add(c);
+        }
+        // обратный список с использованием `java.util.Collections` `reverse()`
+        Collections.reverse(list);
+        // преобразовать `ArrayList` в строку с помощью `StringBuilder` и вернуть ее
+        StringBuilder builder = new StringBuilder(list.size());
+        for (Character c : list) {
+            builder.append(c);
+        }
+        return builder.toString();
+    }
+
+    public static String Scanner() {
+        InputStream is = Task2.class.getResourceAsStream("/Data/test.txt");
+        BufferedReader file = new BufferedReader(new InputStreamReader(is));
+//        File file = new File("/Data/test.txt");
+        String line = null;
+//        try {
+        Scanner scanner = new Scanner(file);
+        // обрабатываем файл пока в нем еще есть токен
+        // в данном случае - есть ли новая строка
+        while (scanner.hasNextLine()) {
+            line = scanner.nextLine();
+            // печатаем построчно
+            System.out.println(line);
+        }
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+        return line;
     }
 }
