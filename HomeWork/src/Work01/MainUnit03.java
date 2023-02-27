@@ -1,7 +1,9 @@
+package Work01;
+
 import java.util.Scanner;
 
-import static Unit03.Task1.*;
-import static Unit03.Task2.*;
+import static Work01.Unit03.Task1.*;
+import static Work01.Unit03.Task2.*;
 
 public class MainUnit03 {
     public static void main(String[] args) {

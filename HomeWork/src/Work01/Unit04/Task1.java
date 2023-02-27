@@ -1,10 +1,10 @@
-package Unit04;
+package Work01.Unit04;
 
 
 import java.util.*;
 
-import static Unit03.Task1.*;
-import static Unit03.Task2.*;
+import static Work01.Unit03.Task1.*;
+import static Work01.Unit03.Task2.*;
 
 public class Task1 {
     /**

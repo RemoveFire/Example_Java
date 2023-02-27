@@ -1,4 +1,4 @@
-package Unit06;
+package Work01.Unit06;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -45,5 +45,6 @@ public class NoteBook {
             System.out.println(yellow + "11. HDD: " + reset + Hdd);
             System.out.println(yellow + "12. Экран:  " + reset + Screen);
             System.out.println(yellow + "13. ОС:  " + reset + osType);
+            System.out.println(yellow + "14. Ссылка:  " + reset + Link);
         }
 }

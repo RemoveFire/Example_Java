@@ -1,8 +1,10 @@
+package Work01;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static Unit02.Task1.*;
-import static Unit02.Task2.*;
+import static Work01.Unit02.Task1.*;
+import static Work01.Unit02.Task2.*;
 
 public class MainUnit02 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Unit04;
+package Work01.Unit04;
 
 import java.io.*;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Task2 {
             return str;
         }
         // создаем пустой список символов
-        List<Character> list = new ArrayList<Character>();
+        List<Character> list = new ArrayList<>();
         // помещаем туда каждый символ заданной строки
         for (char c : str.toCharArray()) {
             list.add(c);
@@ -45,6 +45,7 @@ public class Task2 {
 
     public static String Scanner() {
         InputStream is = Task2.class.getResourceAsStream("/Data/test.txt");
+        assert is != null;
         BufferedReader file = new BufferedReader(new InputStreamReader(is));
 //        File file = new File("/Data/test.txt");
         String line = null;

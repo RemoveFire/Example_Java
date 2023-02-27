@@ -1,4 +1,4 @@
-package Unit05;
+package Work01.Unit05;
 
 public class Position {
     int row;

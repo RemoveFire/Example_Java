@@ -1,10 +1,12 @@
+package Work01;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-import static Unit01.Task1.*;
-import static Unit01.Task2.*;
-import static Unit01.Task3.*;
+import static Work01.Unit01.Task1.*;
+import static Work01.Unit01.Task2.*;
+import static Work01.Unit01.Task3.*;
 
 public class MainUnit01 {
 

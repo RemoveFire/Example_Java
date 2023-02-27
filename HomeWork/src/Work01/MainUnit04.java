@@ -1,5 +1,7 @@
-import static Unit04.Task2.LinkedList;
-import static Unit04.Task1.*;
+package Work01;
+
+import static Work01.Unit04.Task2.LinkedList;
+import static Work01.Unit04.Task1.*;
 
 public class MainUnit04 {
     public static void main(String[] args) {

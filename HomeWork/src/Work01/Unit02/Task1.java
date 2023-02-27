@@ -1,4 +1,4 @@
-package Unit02;
+package Work01.Unit02;
 
 public class Task1 {
     /**

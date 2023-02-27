@@ -1,10 +1,12 @@
+package Work01;
+
 import java.io.IOException;
 import java.util.Scanner;
 
-import static Unit05.WavePro.*;
-import static Unit05.WavePro.yellow;
+import static Work01.Unit05.WavePro.*;
+import static Work01.Unit05.WavePro.yellow;
 import static java.awt.Color.cyan;
-import static Unit06.Main.*;
+import static Work01.Unit06.Main.*;
 
 public class MainUnit06 {
     private static int userIntegerInput(String msg) {

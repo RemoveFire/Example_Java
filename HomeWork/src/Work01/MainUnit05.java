@@ -1,4 +1,6 @@
-import static Unit05.WavePro.*;
+package Work01;
+
+import static Work01.Unit05.WavePro.*;
 
 import java.io.IOException;
 import java.util.Scanner;

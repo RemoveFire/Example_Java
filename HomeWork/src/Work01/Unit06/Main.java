@@ -1,15 +1,14 @@
-package Unit06;
+package Work01.Unit06;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import static Unit05.WavePro.*;
-import static java.awt.Color.cyan;
+import static Work01.Unit05.WavePro.*;
 
 public class Main {
-    static String filename = "C:\\Users\\sivvi\\Java\\Example_Java\\HomeWork\\src\\Unit06\\notebooks_database.csv";
+    static String filename = "C:\\Users\\sivvi\\Java\\Example_Java\\HomeWork\\src\\Work01\\Unit06\\notebooks_database.csv";
     static int itemQuant;
     static String property;
     static ArrayList<NoteBook> items = new ArrayList<>(itemQuant);
@@ -59,7 +58,7 @@ public class Main {
         String[] currStr;
         while (fp.ready()) {
             for (int i = 0; i < itemQuant; i++) {
-                currStr =fp.readLine().split(",");
+                currStr = fp.readLine().split(",");
                 items.get(i).setManufacturer(currStr[0]);
                 items.get(i).setModel(currStr[1]);
                 items.get(i).setPrice(Integer.parseInt(currStr[2]));
@@ -102,7 +101,7 @@ public class Main {
                 case 1 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getManufacturer(), property)) {
+                        if (items.get(i).getManufacturer().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -110,7 +109,7 @@ public class Main {
                 case 2 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getModel(), property)) {
+                        if (items.get(i).getModel().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -142,7 +141,7 @@ public class Main {
                 case 6 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getProcessor(), property)) {
+                        if (items.get(i).getProcessor().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -150,7 +149,7 @@ public class Main {
                 case 7 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getDiscreteGraphicsCard(), property)) {
+                        if (items.get(i).getDiscreteGraphicsCard().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -158,7 +157,7 @@ public class Main {
                 case 8 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getIntegratedGraphics(), property)) {
+                        if (items.get(i).getIntegratedGraphics().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -166,7 +165,7 @@ public class Main {
                 case 9 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getRamSize(), property)) {
+                        if (items.get(i).getRamSize().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -174,7 +173,7 @@ public class Main {
                 case 10 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getSSD(), property)) {
+                        if (items.get(i).getSSD().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -182,7 +181,7 @@ public class Main {
                 case 11 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getHdd(), property)) {
+                        if (items.get(i).getHdd().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -190,7 +189,7 @@ public class Main {
                 case 12 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getScreen(), property)) {
+                        if (items.get(i).getScreen().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -198,7 +197,7 @@ public class Main {
                 case 13 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getOsType(), property)) {
+                        if (items.get(i).getOsType().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -206,7 +205,7 @@ public class Main {
                 case 14 -> {
                     property = userStringInput("\nВведите значение параметра: ");
                     for (int i = 0; i < itemQuant; i++) {
-                        if (Objects.equals(items.get(i).getLink(), property)) {
+                        if (items.get(i).getLink().toLowerCase().contains(property)) {
                             items.get(i).printFullInfo();
                         }
                     }
@@ -228,6 +227,7 @@ public class Main {
 
         int checkExit = 3;
         while (checkExit != 0) {
+            String cyan = "\u001B[36m";
             System.out.println(cyan + """
                     \n1. Найти по параметру:\s
                     2. Вывести все ноутбуки:""" + reset);
