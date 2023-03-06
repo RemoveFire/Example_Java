@@ -23,7 +23,7 @@ public class Main {
      * двоюродные или троюродные, или мы точно знаем как звали прапрабабушку, но совершенно не знаем прабабушку -
      * как хранить такие связи или что будет если в компоненту обхода передать ссылку на null-дерево.
      **/
-    public static void MainTask() {
+    public static void mainTask() {
         Person irina = new Person("Ирина", 56);
         Person igor = new Person("Игорь", 60);
         Person vasya = new Person("Вася", 30);
