@@ -71,7 +71,7 @@
    - с конкретными питомцами и повысить уровень абстракции до взаимодействия с котиком,
    собачкой или хомяком т.е. с интерфейсом “животное”.
 
-### *Структура и главный исполнительный файл (MainUnit02 - запускаем его и выбираем в меню 2 задаачу):* ###
+### *Структура и главный исполнительный файл (MainUnit02 - запускаем его и выбираем в меню 2 задачу):* ###
 
 > MainUnit02.java
 >>               |__
@@ -100,3 +100,98 @@
 -> [Tree.java](Unit02/Tree.java))
 
 ---
+
+
+
+<h2 align="center"><b> Unit03: </b></h2>
+
+Урок 3. Некоторые стандартные интерфейсы Java и примеры их использования
+
+1. Проделать код ревью своих работ. Продумать, какие компоненты можно и нужно переписать.
+
+### *Структура и главный исполнительный файл (MainUnit03 - запускаем его и выбираем в меню 1 задачу):* ###
+
+> MainUnit03.java
+>>               |__
+>>                  |Unit03
+>>                         |__
+>>                            | Main.java
+>>                            | Call.java
+>>                            | Cat.java
+>>                            | Node.java
+>>                            | Person.java
+>>                            | Printer.java
+>>                            | Relationship.java
+>>                            | Research.java
+>>                            | Tree.java
+
+**Воспользуйтесь этим, для перехода:**
+
+[MainUnit03.java](MainUnit03.java)
+||
+[Unit03](Unit03) ||->( [Main.java](Unit03/Main.java)
+-> [Call.java](Unit03/Call.java)
+-> [Cat.java](Unit03/Cat.java)
+-> [Node.java](Unit03/Node.java)
+-> [Person.java](Unit03/Person.java)
+-> [Printer.java](Unit03/Printer.java)
+-> [Relationship.java](Unit03/Relationship.java)
+-> [Research.java](Unit03/Research.java)
+-> [Tree.java](Unit03/Tree.java))
+
+---
+
+
+
+<h2 align="center"><b> Unit04: </b></h2>
+
+Урок 4. ООП: Обобщения. ч1
+
+1. С учетом информации полученной ранее знакомимся с параметрическим полиморфизмом и продолжаем погружаться в ООП.
+   Спроектировать и реализовать планировщик дел для работы с задачами разных приоритетов.
+
+   Например:
+   - определить уровень приоритетов: низкий, средний, немедленное выполнение;
+   - выделить компоненту для хранения данных;
+   - выделить компоненту для организации импорта\экспорта данных.
+   
+   Файл должен содержать следующие данные: 
+   - id;
+   - дату добавления записи;
+   - время добавления записи;
+   - дедлай задачи;
+   - ФИО автора;
+   - данные хранятся в файле csv/jsom/xml
+   - другие компоненты.
+
+### *Структура и главный исполнительный файл (MainUnit04 - запускаем его и выбираем в меню 1 задачу):* ###
+
+> MainUnit04.java
+>>               |__
+>>                  |Unit04
+>>                         |__
+>>                            |Data
+>>                            |    |__
+>>                            |       | planer.csv
+>>                            |
+>>                            | Main.java
+>>                            | AddTask.java
+>>                            | PrintPlaner.java
+>>                            | PrintTaskInPlaner.java
+>>                            | Talking.java
+
+
+**Воспользуйтесь этим, для перехода:**
+
+[MainUnit04.java](MainUnit04.java)
+||
+[Unit04](Unit04) ||->[Data](Unit04/Data) |-> ([planer.csv](Unit04/Data/planer.csv)) ||
+-> ([Main.java](Unit04/Main.java)
+-> [AddTask.java](Unit04/AddTask.java)
+-> [PrintPlaner.java](Unit04/PrintPlaner.java)
+-> [PrintTaskInPlaner.java](Unit04/PrintTaskInPlaner.java)
+-> [Talking.java](Unit04/Talking.java))
+
+---
+
+
